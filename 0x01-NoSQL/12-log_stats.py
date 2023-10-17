@@ -15,4 +15,5 @@ print('    method GET:', nginx_logs.count_documents({'method': 'POST'}))
 print('    method GET:', nginx_logs.count_documents({'method': 'PUT'}))
 print('    method GET:', nginx_logs.count_documents({'method': 'PATCH'}))
 print('    method GET:', nginx_logs.count_documents({'method': 'DELETE'}))
-print(nginx_logs.count_documents({'method': 'GET', 'path': '/status'}), 'status check')
+print(nginx_logs.count_documents({'method': 'GET',
+                                  'path': '/status'}), 'status check')
