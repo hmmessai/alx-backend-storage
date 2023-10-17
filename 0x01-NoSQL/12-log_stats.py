@@ -3,7 +3,6 @@
 Provides some stats about Nginx logs stored in MongoDB
 """
 if __name__ == '__main__':
-    import pymongo
     from pymongo import MongoClient
 
     client = MongoClient("mongodb://127.0.0.1:27017")
