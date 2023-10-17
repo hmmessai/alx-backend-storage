@@ -11,10 +11,10 @@ if __name__ == '__main__':
 
     print(nginx_logs.count_documents({}), 'logs')
     print('Methods:')
-    print('    method GET:', nginx_logs.count_documents({'method': 'GET'}))
-    print('    method GET:', nginx_logs.count_documents({'method': 'POST'}))
-    print('    method GET:', nginx_logs.count_documents({'method': 'PUT'}))
-    print('    method GET:', nginx_logs.count_documents({'method': 'PATCH'}))
-    print('    method GET:', nginx_logs.count_documents({'method': 'DELETE'}))
+    print('\tmethod GET:', nginx_logs.count_documents({'method': 'GET'}))
+    print('\tmethod GET:', nginx_logs.count_documents({'method': 'POST'}))
+    print('\tmethod GET:', nginx_logs.count_documents({'method': 'PUT'}))
+    print('\tmethod GET:', nginx_logs.count_documents({'method': 'PATCH'}))
+    print('\tmethod GET:', nginx_logs.count_documents({'method': 'DELETE'}))
     print(nginx_logs.count_documents({'method': 'GET',
                                       'path': '/status'}), 'status check')
