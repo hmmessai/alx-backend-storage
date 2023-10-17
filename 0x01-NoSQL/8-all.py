@@ -9,4 +9,4 @@ def list_all(mongo_collection):
     """
     Lists all documents in the given collection mongo_collection
     """
-    return mongo_collecitons.find()
+    return [*mongo_collecitons.find()]
