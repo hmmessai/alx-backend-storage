@@ -28,6 +28,7 @@ def count(func: Callable):
         return html
     return wrapper
 
+
 @count
 def get_page(url: str) -> str:
     """
