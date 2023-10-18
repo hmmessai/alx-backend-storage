@@ -25,11 +25,13 @@ class Cache:
     Representation of Cache class
     """
     def __init__(self):
+        """Initializes the Cache instance"""
         self._redis = redis.Redis()
         self._redis.flushdb()
     
     @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
+        """Stores new data with randomly generated key"""
         key = str(uuid.uuid4())
         self._redis.set(key, data)
         return key
