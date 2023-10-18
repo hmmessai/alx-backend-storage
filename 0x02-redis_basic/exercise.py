@@ -1,6 +1,11 @@
+#!/usr/bin/env python3
+"""
+Defines the Cache class
+"""
 import redis
 import uuid
 from typing import Union
+
 
 class Cache:
     """
