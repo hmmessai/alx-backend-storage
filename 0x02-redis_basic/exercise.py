@@ -43,7 +43,7 @@ def replay(method: Callable):
         count = int(count.decode('utf-8'))
     except Exception:
         count = 0
-    print("{} was called {} times".format(name, count))
+    print("{} was called {} times:".format(name, count))
     inputs = r.lrange("{}:inputs".format(name), 0, -1)
     outputs = r.lrange("{}:outputs".format(name), 0, -1)
     for inp, outp in zip(inputs, outputs):
