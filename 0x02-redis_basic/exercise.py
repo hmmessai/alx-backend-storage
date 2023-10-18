@@ -44,8 +44,8 @@ def replay(method: Callable):
     except Exception:
         count = 0
     print("{} was called {} times".format(name, count))
-    inputs = r.lrange(name+":inputs", 0, -1)
-    outputs = r.lrange(name+":outputs", 0, -1)
+    inputs = r.lrange("{}:inputs".format(name), 0, -1)
+    outputs = r.lrange("{}:outputs".format(name), 0, -1)
     for inp, outp in zip(inputs, outputs):
         try:
             inp = inp.decode('utf-8')
